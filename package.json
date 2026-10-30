@@ -1,0 +1,32 @@
+{
+  "name": "opencode-fledly",
+  "version": "0.1.1",
+  "description": "Fledly for OpenCode: iOS App Store intelligence (young apps that earn, proven app ideas, top charts, keyword rank tracking) as a remote MCP server plus a usage skill.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Mika Heinonen",
+    "email": "hello@fledly.app",
+    "url": "https://fledly.app"
+  },
+  "homepage": "https://fledly.app/docs/mcp/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synthentica/opencode-fledly.git"
+  },
+  "bugs": {
+    "email": "hello@fledly.app"
+  },
+  "keywords": ["opencode", "opencode-plugin", "mcp", "app-store", "aso", "ios", "app-ideas", "fledly"],
+  "files": ["index.js", "skills", "README.md", "LICENSE"],
+  "exports": {
+    ".": "./index.js",
+    "./server": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
