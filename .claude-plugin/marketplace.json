@@ -1,0 +1,27 @@
+{
+  "name": "fledly",
+  "owner": {
+    "name": "Fledly",
+    "email": "hello@fledly.app"
+  },
+  "metadata": {
+    "description": "Fledly: iOS App Store market data for AI agents.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "fledly",
+      "source": "./",
+      "description": "iOS App Store market data for your AI agent: young apps that already earn, proven app ideas, top charts, App Store keyword research and daily rank tracking, through Fledly's hosted MCP server with OAuth sign-in.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Fledly",
+        "url": "https://fledly.app"
+      },
+      "homepage": "https://fledly.app/docs/mcp/",
+      "repository": "https://github.com/synthentica/fledly",
+      "license": "MIT",
+      "keywords": ["app-store", "aso", "ios", "keyword-research", "rank-tracking", "app-ideas"]
+    }
+  ]
+}
