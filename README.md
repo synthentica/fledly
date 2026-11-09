@@ -32,7 +32,30 @@ Open Cursor Settings > MCP and sign in to Fledly when Cursor asks.
 
 ### Hermes Agent
 
-The Hermes package is `plugin.json`, `mcp.json` and the skill in `skills/fledly/`. It ships no code. The first time the server starts, Hermes opens the Fledly sign-in page in your browser and keeps the OAuth token under `~/.hermes/mcp-tokens/`. Every tool call goes to `fledly.app` and acts on your own Fledly account. `track_*`, `untrack_*` and `save_idea` change your tracked apps, searches, competitors and saved ideas; the other tools only read. The package sends no telemetry.
+You need Hermes Agent 0.21.6 or newer and Node.js 20 or newer with `npx` on your `PATH`.
+
+```bash
+hermes plugins install synthentica/fledly --no-enable
+hermes plugins enable fledly
+```
+
+Start a new session. The first time the server starts, your browser opens the Fledly sign-in page; sign in and approve. The token is kept and refreshed, so you sign in once. If the tools don't show up after you sign in, run `/reload-mcp`.
+
+The Hermes package is `plugin.json`, `mcp.json` and the skill in `skills/fledly/`. It ships no code of its own. Before you install, know that:
+
+- `mcp.json` runs the pinned `mcp-remote@0.15.2` through `npx`, which downloads it from npm on first use. It opens a local callback port for the sign-in and stores the OAuth tokens in `~/.mcp-auth`.
+- Every tool call goes to `fledly.app` and acts on your own Fledly account. The server decides the tool set at runtime, so the pinned commit doesn't cover it.
+- `track_app`, `track_keywords`, `untrack_keyword`, `track_competitor`, `untrack_competitor` and `save_idea` change your tracked apps, searches, competitors and saved ideas. The other tools only read. Nothing spends money.
+- The package sends no telemetry.
+
+Without the plugin, add the server to `~/.hermes/config.yaml` and Hermes signs in with its own OAuth client:
+
+```yaml
+mcp_servers:
+  fledly:
+    url: "https://fledly.app/mcp"
+    auth: oauth
+```
 
 ### OpenCode
 
