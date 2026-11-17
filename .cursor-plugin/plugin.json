@@ -1,0 +1,18 @@
+{
+  "name": "fledly",
+  "displayName": "Fledly",
+  "version": "0.2.0",
+  "description": "iOS App Store market data in Cursor: young apps that already earn, proven app ideas, top charts, App Store keyword research and daily rank tracking, through Fledly's hosted MCP server with OAuth sign-in.",
+  "author": {
+    "name": "Fledly",
+    "email": "hello@fledly.app",
+    "url": "https://fledly.app"
+  },
+  "homepage": "https://fledly.app/docs/mcp/",
+  "repository": "https://github.com/synthentica/fledly",
+  "license": "MIT",
+  "keywords": ["app-store", "aso", "app-store-optimization", "ios", "keyword-research", "rank-tracking", "app-ideas", "market-research", "mcp"],
+  "logo": "assets/icon.svg",
+  "skills": "skills/",
+  "mcpServers": "cursor-mcp.json"
+}

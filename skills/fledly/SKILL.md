@@ -42,6 +42,6 @@ Keywords and ranks:
 
 - When the user is working on an iOS project, the app's App Store id is often in the project (fastlane metadata, App Store Connect links). Use it with `get_app`, `search_app_store` and `get_my_apps`.
 - Revenue figures are Fledly estimates from chart positions; say so when quoting them.
-- Market lists cover us, gb, de, ca, au and fi. Live lookups and searches work in any App Store country.
+- Market lists cover 23 App Stores: us, gb, de, ca, au, fi, jp, kr, fr, es, it, br, mx, nl, se, ch, tw, hk, th, vn, in, sa and ae. Live lookups and searches work in any App Store country.
 - A search or keyword set Fledly has not collected yet is queued for the next daily run. Tell the user to check back tomorrow instead of retrying.
 - If a result says the free plan limited it, say how many results the user saw and that the full list is on paid plans at https://fledly.app/pricing. Do not push upgrades beyond that.
