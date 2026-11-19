@@ -1,0 +1,11 @@
+{
+  "name": "fledly",
+  "version": "0.2.0",
+  "description": "iOS App Store market data for Gemini CLI: young apps that already earn, proven app ideas, top charts, App Store keyword research and daily rank tracking. Hosted MCP server with OAuth sign-in; a free Fledly account works.",
+  "mcpServers": {
+    "fledly": {
+      "url": "https://fledly.app/mcp",
+      "type": "http"
+    }
+  }
+}
