@@ -10,5 +10,15 @@
   "homepage": "https://fledly.app/docs/mcp/",
   "repository": "https://github.com/synthentica/fledly",
   "license": "MIT",
-  "keywords": ["app-store", "aso", "app-store-optimization", "ios", "keyword-research", "rank-tracking", "app-ideas", "mcp"]
+  "keywords": [
+    "app-store",
+    "aso",
+    "app-store-optimization",
+    "ios",
+    "keyword-research",
+    "rank-tracking",
+    "app-ideas",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://fledly.app/privacy"
 }

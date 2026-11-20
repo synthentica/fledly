@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fledly": {
+      "type": "http",
+      "url": "https://fledly.app/mcp"
+    }
+  }
+}
