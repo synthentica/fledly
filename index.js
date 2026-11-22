@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -33,13 +33,21 @@ async function v2_setup(ctx) {
     draft.set(NAME, { type: "remote", url: MCP_URL });
   });
 
-  const path = join(SKILLS_DIR, NAME, "SKILL.md");
-  const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(await readFile(path, "utf8"));
-  if (!match) return;
-  const description = /^description:\s*(.+)$/m.exec(match[1])?.[1].trim();
+  // Every folder under skills/ is one skill: the umbrella `fledly` skill plus the focused workflow skills.
+  const dirs = (await readdir(SKILLS_DIR, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name).sort();
+  const skills = [];
+  for (const dir of dirs) {
+    const path = join(SKILLS_DIR, dir, "SKILL.md");
+    const text = await readFile(path, "utf8").catch(() => null);
+    const match = text && /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(text);
+    if (!match) continue;
+    const name = /^name:\s*(.+)$/m.exec(match[1])?.[1].trim() ?? dir;
+    const description = /^description:\s*(.+)$/m.exec(match[1])?.[1].trim();
+    skills.push({ id: name, name, description, path, location: path, content: match[2] });
+  }
   // OpenCode renamed Skill.Info.location to path in 2.0.4; send both so one build works on either side.
   await ctx.skill.transform((draft) => {
-    draft.add({ id: NAME, name: NAME, description, path, location: path, content: match[2] });
+    for (const skill of skills) draft.add(skill);
   });
 }
 

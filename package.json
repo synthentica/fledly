@@ -1,6 +1,6 @@
 {
   "name": "opencode-fledly",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Fledly for OpenCode: iOS App Store market data (young apps that earn, proven app ideas, top charts, App Store keyword research and rank tracking) as a remote MCP server plus a usage skill.",
   "type": "module",
   "license": "MIT",

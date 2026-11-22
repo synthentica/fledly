@@ -34,9 +34,20 @@ Keywords and ranks:
 - Packing the best words into the keyword field → `build_keyword_field`.
 - Daily tracking → `track_app`, then `track_keywords`; read results later with `get_my_apps`. `untrack_keyword` stops one search.
 - Competitors → `track_competitor`, then `get_competitor_report` for their listing changes, ranking gaps and words they use that the user's app does not. `untrack_competitor` stops one.
+- What to change in the user's own listing → `get_app_tips`; after making a change, `mark_tip_done` with the tip id.
 - Plan, limits and usage → `get_account`.
 
-`track_*`, `untrack_*` and `save_idea` change the user's Fledly account; the other tools only read.
+The user and their week:
+
+- Start a chat about the user's own apps with `get_my_apps`: it returns their saved profile (what they build, for whom, categories, stores, stage, goal).
+- No profile yet → ask one question at a time and save the answers with `save_my_profile`, in the user's own words. Never fill in what they did not say.
+- "What happened this week?" or a Monday check-in → `get_weekly_brief`: searches that moved, competitors' changes, the top tip per app, and new young earners and ideas in the user's categories.
+
+`track_*`, `untrack_*`, `save_idea`, `save_my_profile` and `mark_tip_done` change the user's Fledly account; the other tools only read.
+
+## Focused skills
+
+For a full workflow, these skills in the same package walk through the tool calls step by step: `fledly-aso-audit` (scored listing review and fixes), `fledly-keyword-research`, `fledly-metadata-rewrite` (title, subtitle and keyword field within Apple's limits), `fledly-competitor-watch`, `fledly-app-idea-validation`, `fledly-launch-plan`, `fledly-localization` (cross-localization), `fledly-weekly-review`, `fledly-subscription-pricing` and `fledly-market-pulse`.
 
 ## Good habits
 
