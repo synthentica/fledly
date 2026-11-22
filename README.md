@@ -1,6 +1,6 @@
 # Fledly for AI agents
 
-[Fledly](https://fledly.app) is iOS App Store market data for indie developers: young apps that already earn money, app ideas scored from market data, top charts, App Store keyword research and daily rank tracking. This repo connects your AI agent to Fledly's hosted MCP server (`https://fledly.app/mcp`) and adds skills: one that tells the agent which Fledly tool answers which question, and ten workflow skills (ASO audit, keyword research, metadata rewrite and more) that walk through the tool calls step by step.
+[Fledly](https://fledly.app) is iOS App Store market data for indie developers: young apps that already earn money, app ideas scored from market data, top charts, App Store keyword research and daily rank tracking. This repo connects your AI agent to Fledly's hosted MCP server (`https://fledly.app/mcp`) and adds skills: one that tells the agent which Fledly tool answers which question, and twelve workflow skills (ASO audit, keyword research, metadata rewrite and more) that walk through the tool calls step by step.
 
 Sign in with your Fledly account the first time a tool runs. A free account works, and there is no API key to paste.
 
@@ -98,6 +98,8 @@ Restart OpenCode. The first Fledly tool call opens the sign-in page; you can als
 | `fledly-weekly-review` | Monday check-in: what moved, what competitors did, what to do this week |
 | `fledly-subscription-pricing` | What the niche charges and which pricing model earns |
 | `fledly-market-pulse` | Top charts, new apps that earn and hot categories in one store |
+| `fledly-my-numbers` | Your own App Store Connect downloads and proceeds and RevenueCat MRR, next to your listing changes (Pro, Studio) |
+| `fledly-ai-visibility` | Whether ChatGPT, Claude and Gemini recommend your app, and which sources they cite (Pro, Studio) |
 
 Revenue figures in every skill are Fledly estimates from chart positions, and the skills tell the agent to say so.
 

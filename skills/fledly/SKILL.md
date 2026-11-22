@@ -35,6 +35,8 @@ Keywords and ranks:
 - Daily tracking → `track_app`, then `track_keywords`; read results later with `get_my_apps`. `untrack_keyword` stops one search.
 - Competitors → `track_competitor`, then `get_competitor_report` for their listing changes, ranking gaps and words they use that the user's app does not. `untrack_competitor` stops one.
 - What to change in the user's own listing → `get_app_tips`; after making a change, `mark_tip_done` with the tip id.
+- The user's own downloads, proceeds and MRR (Pro and Studio, App Store Connect connected on fledly.app) → `get_my_numbers`. These are real reported numbers, not estimates.
+- Whether ChatGPT, Claude and Gemini recommend the user's app (Pro and Studio) → `get_ai_visibility`.
 - Plan, limits and usage → `get_account`.
 
 The user and their week:
@@ -47,7 +49,7 @@ The user and their week:
 
 ## Focused skills
 
-For a full workflow, these skills in the same package walk through the tool calls step by step: `fledly-aso-audit` (scored listing review and fixes), `fledly-keyword-research`, `fledly-metadata-rewrite` (title, subtitle and keyword field within Apple's limits), `fledly-competitor-watch`, `fledly-app-idea-validation`, `fledly-launch-plan`, `fledly-localization` (cross-localization), `fledly-weekly-review`, `fledly-subscription-pricing` and `fledly-market-pulse`.
+For a full workflow, these skills in the same package walk through the tool calls step by step: `fledly-aso-audit` (scored listing review and fixes), `fledly-keyword-research`, `fledly-metadata-rewrite` (title, subtitle and keyword field within Apple's limits), `fledly-competitor-watch`, `fledly-app-idea-validation`, `fledly-launch-plan`, `fledly-localization` (cross-localization), `fledly-weekly-review`, `fledly-subscription-pricing`, `fledly-market-pulse`, `fledly-my-numbers` (your own App Store Connect and RevenueCat numbers) and `fledly-ai-visibility` (do AI assistants recommend your app).
 
 ## Good habits
 
