@@ -5,12 +5,12 @@ description: Check whether ChatGPT, Claude and Gemini recommend an iOS developer
 
 # AI visibility with Fledly
 
-Every week Fledly asks ChatGPT, Claude and Gemini, with web search on, a few questions that are real buying decisions ("What is the best habit tracker app for iPhone?", "a good <competitor> alternative for iPhone"), and records which apps they recommend and whether the user's app is among them. A few real buying questions beat many variants of one. Needs Fledly's MCP server (`https://fledly.app/mcp`) and a Pro or Studio plan with AI visibility turned on for the app (fledly.app, My apps, AI visibility). If the tools are missing, follow the setup in the `fledly` skill.
+Every week Fledly asks ChatGPT and Claude (Gemini coming on Studio), with web search on, a few questions that are real buying decisions ("What is the best habit tracker app for iPhone?", "a good <competitor> alternative for iPhone"), and records which apps they recommend and whether the user's app is among them. A few real buying questions beat many variants of one. Needs Fledly's MCP server (`https://fledly.app/mcp`) and a Pro or Studio plan with AI visibility turned on for the app (fledly.app, My apps, AI visibility). If the tools are missing, follow the setup in the `fledly` skill.
 
 ## Steps
 
 1. **Which app.** `get_my_apps`, then `get_ai_visibility` with `app`.
-   - `locked: true`: say it is on Pro (1 app, 5 questions, ChatGPT and Gemini) and Studio (3 apps, 15 questions, every engine), once, with https://fledly.app/pricing.
+   - `locked: true`: say it is on Pro (1 app, 5 questions, ChatGPT and Claude) and Studio (3 apps, 15 questions, ChatGPT and Claude, Gemini coming), once, with https://fledly.app/pricing.
    - `enabled: false`: tell the user to turn it on in My apps, AI visibility; the first answers arrive within the hour.
 2. **Who they recommend instead.** Start with `recommended_instead`: every app the assistants named, its share of answers and average position, the user's rank among them (`your_rank`), apps new since last week (`vs_last_week: "new"`) and `dropped_since_last_week`. Then `score.rate` (share of unbranded questions where the app was mentioned) and `score.by_engine`.
 3. **Read the answers.** For each question in `questions`, look at which apps were named instead and which `sources` the assistants cited. Sources that recommend competitors but not the user's app are the places to get onto (review sites, "best apps" lists, Reddit threads, comparison posts).
