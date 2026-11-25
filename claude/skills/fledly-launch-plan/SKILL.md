@@ -29,7 +29,7 @@ Target searches (most winnable first)
 Listing draft (<locale>)
 Title     "<text>"  <n>/30
 Subtitle  "<text>"  <n>/30
-Keywords  "<text>"  <n>/100 bytes
+Keywords  "<text>"  <n>/100 characters
 
 Competitors and prices
 - <App>: <price points>, <rating> (<ratings> ratings)

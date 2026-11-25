@@ -1,0 +1,32 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "fledly",
+  "displayName": "Fledly",
+  "version": "0.4.1",
+  "description": "iOS App Store market data for indie developers: young apps that earn, proven app ideas, top charts, keyword research, and daily rank tracking.",
+  "logo": "assets/icon.svg",
+  "suggestedPrompts": [
+    "Which iPhone apps released this year already earn over $50k a month in the US?",
+    "Show Fledly's top proven app ideas I could build alone",
+    "Audit my App Store listing and suggest high-impact keyword fixes"
+  ],
+  "author": {
+    "name": "Fledly",
+    "email": "hello@fledly.app",
+    "url": "https://fledly.app"
+  },
+  "homepage": "https://fledly.app/docs/mcp/",
+  "repository": "https://github.com/synthentica/fledly",
+  "license": "MIT",
+  "keywords": [
+    "app-store",
+    "aso",
+    "app-store-optimization",
+    "ios",
+    "keyword-research",
+    "rank-tracking",
+    "app-ideas",
+    "market-research",
+    "mcp"
+  ]
+}

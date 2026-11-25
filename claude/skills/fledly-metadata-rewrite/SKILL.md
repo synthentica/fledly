@@ -1,6 +1,6 @@
 ---
 name: fledly-metadata-rewrite
-description: Rewrite an iOS app's App Store title, subtitle and 100-byte keyword field with Fledly's MCP tools so they fit Apple's limits and carry the best searches without wasted words. Use when the user asks to write, rewrite or optimize their App Store name, subtitle or keyword field, asks whether their metadata fits Apple's character and byte limits, or is preparing a version update's listing text.
+description: Rewrite an iOS app's App Store title, subtitle and 100-character keyword field with Fledly's MCP tools so they fit Apple's limits and carry the best searches without wasted words. Use when the user asks to write, rewrite or optimize their App Store name, subtitle or keyword field, asks whether their metadata fits Apple's character and byte limits, or is preparing a version update's listing text.
 ---
 
 # Title, subtitle and keyword field with Fledly
@@ -11,7 +11,7 @@ Writes App Store texts that Apple accepts and that index the most valuable searc
 
 - Title (app name): 30 characters. Indexed for search, the strongest field.
 - Subtitle: 30 characters. Indexed.
-- Keyword field: 100 bytes, comma-separated, no spaces after commas. Indexed. Hidden from users.
+- Keyword field: 100 characters, comma-separated, no spaces after commas. Indexed. Hidden from users.
 - Promotional text 170 characters and description 4000 characters: not indexed for search.
 - Apple combines words across title, subtitle and keyword field, so a word only needs to appear once. Plurals and the app's own name, category name and "app" waste space.
 
@@ -30,7 +30,7 @@ Writes App Store texts that Apple accepts and that index the most valuable searc
 Locale: en-US
 Title     "<text>"  <n>/30
 Subtitle  "<text>"  <n>/30
-Keywords  "<text>"  <n>/100 bytes
+Keywords  "<text>"  <n>/100 characters
 check_metadata: passes | <issues>
 Changed: <one line per change and the search it targets>
 ```
@@ -39,7 +39,7 @@ If the project has fastlane metadata, offer to write the three files. After the 
 
 ## Rules
 
-- Count bytes, not characters, for the keyword field: letters such as ä, é or kana take 2-3 bytes.
+- The keyword field limit is 100 characters, as App Store Connect counts it: ä, é, kana and kanji count once each.
 - No competitor brand names or trademarks in any field (App Review Guideline 2.3.7).
 - No claims the app cannot back ("#1", "best") in the title or subtitle.
 - Rank changes take days to show. Do not promise a ranking.

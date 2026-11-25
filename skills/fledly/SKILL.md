@@ -1,6 +1,6 @@
 ---
 name: fledly
-description: iOS App Store market research and App Store Optimization (ASO) with Fledly's MCP tools. Use when the user asks which new iPhone apps already make money, what app to build next or whether an app idea is worth building, what is on the App Store top charts, how much an app earns, App Store keyword research (which searches to target, keyword popularity and difficulty, building the 100-byte keyword field, checking title and subtitle limits), where an app ranks for a search, daily App Store rank tracking, or what competitors changed in their listings.
+description: iOS App Store market research and App Store Optimization (ASO) with Fledly's MCP tools. Use when the user asks which new iPhone apps already make money, what app to build next or whether an app idea is worth building, what is on the App Store top charts, how much an app earns, App Store keyword research (which searches to target, keyword popularity and difficulty, building the 100-character keyword field, checking title and subtitle limits), where an app ranks for a search, daily App Store rank tracking, or what competitors changed in their listings.
 ---
 
 # Using Fledly
@@ -30,13 +30,13 @@ Keywords and ranks:
 
 - "Where does my app rank for X?" → `search_app_store` with `app_id`.
 - Keyword ideas for an app → `suggest_keywords`.
-- Checking texts before submitting (title and subtitle 30 characters, keyword field 100 bytes, wasted words) → `check_metadata`.
+- Checking texts before submitting (title and subtitle 30 characters, keyword field 100 characters, wasted words) → `check_metadata`.
 - Packing the best words into the keyword field → `build_keyword_field`.
 - Daily tracking → `track_app`, then `track_keywords`; read results later with `get_my_apps`. `untrack_keyword` stops one search.
 - Competitors → `track_competitor`, then `get_competitor_report` for their listing changes, ranking gaps and words they use that the user's app does not. `untrack_competitor` stops one.
 - What to change in the user's own listing → `get_app_tips`; after making a change, `mark_tip_done` with the tip id.
 - The user's own downloads, proceeds and MRR (Pro and Studio, App Store Connect connected on fledly.app) → `get_my_numbers`. These are real reported numbers, not estimates.
-- Whether ChatGPT, Claude and Gemini recommend the user's app (Pro and Studio) → `get_ai_visibility`.
+- Whether ChatGPT and Claude recommend the user's app (Pro and Studio) → `get_ai_visibility`.
 - Plan, limits and usage → `get_account`.
 
 The user and their week:

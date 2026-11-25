@@ -27,7 +27,7 @@ What works
 
 Fix first (highest impact)
 1. <tip title>: <why, with the number from the tip>
-   Paste: <field> = "<text>" (<n>/<limit> chars|bytes)
+   Paste: <field> = "<text>" (<n>/<limit> chars)
 2. ...
 
 Also worth doing

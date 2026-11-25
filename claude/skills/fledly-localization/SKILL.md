@@ -1,11 +1,11 @@
 ---
 name: fledly-localization
-description: App Store localization and cross-localization for an iOS app with Fledly's MCP tools - which languages each storefront indexes, extra 100-byte keyword fields from a second localization, and translated titles and subtitles checked against Apple's limits. Use when the user asks which App Store languages to add, how to rank in another country, how to get more keyword space, what cross-localization is, or wants to localize their App Store listing.
+description: App Store localization and cross-localization for an iOS app with Fledly's MCP tools - which languages each storefront indexes, extra 100-character keyword fields from a second localization, and translated titles and subtitles checked against Apple's limits. Use when the user asks which App Store languages to add, how to rank in another country, how to get more keyword space, what cross-localization is, or wants to localize their App Store listing.
 ---
 
 # Localization and cross-localization with Fledly
 
-Most App Stores index more than one localization. A second localization gives the app another title, subtitle and 100-byte keyword field in that store, even if the app itself is not translated. Needs Fledly's MCP server (`https://fledly.app/mcp`); if its tools are missing, follow the setup in the `fledly` skill.
+Most App Stores index more than one localization. A second localization gives the app another title, subtitle and 100-character keyword field in that store, even if the app itself is not translated. Needs Fledly's MCP server (`https://fledly.app/mcp`); if its tools are missing, follow the setup in the `fledly` skill.
 
 ## Which localizations a storefront indexes
 
@@ -47,7 +47,7 @@ Per store: the localizations to fill, the role of each (main language, extra key
 
 ```
 us: en-US (main) + es-MX (extra keyword field)
-  es-MX keywords "<text>"  <n>/100 bytes  check_metadata: passes
+  es-MX keywords "<text>"  <n>/100 characters  check_metadata: passes
 ```
 
 Then the order to do them in, biggest store and weakest competition first.
@@ -55,5 +55,5 @@ Then the order to do them in, biggest store and weakest competition first.
 ## Rules
 
 - A cross-localization field must still be honest: words that describe the app. Unrelated words risk rejection.
-- Byte counts differ by script: Chinese, Japanese, Korean, Arabic and accented letters take 2-3 bytes each.
+- Apple counts characters, not bytes: Chinese, Japanese, Korean, Arabic and accented letters count once each, so a Japanese field holds as many entries as its character count allows.
 - Ranks from a new localization show after Apple reindexes the version, usually days. Do not promise results.
